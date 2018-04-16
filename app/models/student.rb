@@ -16,7 +16,7 @@ class Student < ActiveRecord::Base
 
   def self.search(query)
     if query != ""
-      student = Student.find_by(name: query)
+      @students = Student.find_by(name: query)
       render "index"
     else
       self.all
