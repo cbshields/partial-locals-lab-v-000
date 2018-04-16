@@ -1,8 +1,4 @@
 class StudentsController < ApplicationController
-  def search
-    raise params.inspect
-    student = Student.find_by(name: name)
-  end
 
   def new
     @student = Student.new
@@ -27,6 +23,11 @@ class StudentsController < ApplicationController
 
   def index
     @students = Student.all
+  end
+
+  def search
+    raise params.inspect
+    student = Student.find_by(name: name)
   end
 
 
