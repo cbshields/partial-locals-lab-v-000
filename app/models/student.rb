@@ -20,5 +20,6 @@ class Student < ActiveRecord::Base
       @students = Student.where(name: query)
     else
       self.all
+    end
   end
 end
