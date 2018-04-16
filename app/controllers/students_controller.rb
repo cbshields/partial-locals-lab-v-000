@@ -3,7 +3,7 @@ class StudentsController < ApplicationController
     raise params.inspect
     student = Student.find_by(name: name)
   end
-  
+
   def new
     @student = Student.new
   end
