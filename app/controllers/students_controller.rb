@@ -25,12 +25,6 @@ class StudentsController < ApplicationController
     @students = Student.all
   end
 
-  def search
-    raise params.inspect
-    student = Student.find_by(name: name)
-  end
-
-
   def student_params
     params.require(:student).permit(:name, :birthday, :hometown)
   end
