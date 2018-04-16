@@ -8,7 +8,4 @@ class ClassroomsController < ApplicationController
     @classrooms = Classroom.all
   end
 
-  def search
-    student = Student.find_by(name: name)
-  end
 end
